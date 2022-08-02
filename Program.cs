@@ -46,7 +46,7 @@ switch (opcao) {
     default:
         Console.WriteLine("switch: Opção inválida");
         break;
-}*/
+}
 
 // for 
 var valores = Console.ReadLine();
@@ -65,4 +65,15 @@ while (contador < matrizValores.Length) {
     Console.WriteLine(matrizValores[contador]);
     contador++;
 
-}
+} */
+
+var notasTurma = new List<int> { 10, 2, 5, 7, 8, 9, 7, 6, 6, 5, 3, 10, 9, 8 };
+
+var existeNota1 = notasTurma.Any(a => a == 1);
+var primeiraNota10 = notasTuma.First( a =>  a == 10);
+var singleNota1 = notasTuma.Single(a => a == 2);
+var max = notasTuma.Max();
+var min = notasTuma.Min();
+var sum = notasTuma.Sum();
+var media = notasTurma.Average();
+
