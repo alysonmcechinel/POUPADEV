@@ -185,6 +185,7 @@ public enum TipoOperacao {
 }
 
 public class Operacao {
+
     public Operacao(decimal valor, TipoOperacao tipo, int idObjetivo)
     {
         Id = new Random().Next(0, 1000);
@@ -200,6 +201,7 @@ public class Operacao {
 }
 
 public class ObjetivoFinanceiro {
+
     public ObjetivoFinanceiro(string? titulo, decimal? valorObjetivo)
     {
         Id = new Random().Next(0, 1000);
@@ -217,12 +219,12 @@ public class ObjetivoFinanceiro {
 
     public decimal ObterSaldo() {
         var totalDeposito = Operacoes
-            .Where(o => o.Tipo == TipoOperacao.Deposito)
-            .Sum(o => o.Valor);
+            .Where(a => a.Tipo == TipoOperacao.Deposito)
+            .Sum(a => a.Valor);
 
         var totalSaque = Operacoes
-            .Where(o => o.Tipo == TipoOperacao.Saque)
-            .Sum(o => o.Valor);
+            .Where(a => a.Tipo == TipoOperacao.Saque)
+            .Sum(a => a.Valor);
 
         return totalDeposito - totalSaque;
     }
